@@ -96,11 +96,10 @@ function MegazineCover() {
 
   const renderChars = useMemo(
     () =>
-      'EVERYTHING'
-        .split('')
-        .map((char) => (
-          <CoverTitleChar key={char + Date.now}>{char}</CoverTitleChar>
-        )),
+      'EVERYTHING'.split('').map((char, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <CoverTitleChar key={char + index}>{char}</CoverTitleChar>
+      )),
     [],
   )
 

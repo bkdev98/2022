@@ -17,12 +17,27 @@ export const GlobalStyle = createGlobalStyle`
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Neue Montreal";
+    src: url("/fonts/neue-montreal/NeueMontreal-Medium.otf");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Neue Montreal";
+    src: url("/fonts/neue-montreal/NeueMontreal-Regular.otf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
   html,
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: "Neue Montreal", sans-serif;
     background-color: ${(props) => props.theme.palette.background};
     color: ${(props) => props.theme.palette.textPrimary};
   }
