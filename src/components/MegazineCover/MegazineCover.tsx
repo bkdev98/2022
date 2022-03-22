@@ -87,6 +87,7 @@ const ImageWrapper = styled(motion.div)`
 
 const CoverImage = styled(Image)`
   object-fit: cover;
+  pointer-events: none;
 `
 
 function MegazineCover() {
