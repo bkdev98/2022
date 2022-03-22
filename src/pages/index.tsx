@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import styles from '../styles/Home.module.css'
+import Layout from '@components/Layout'
+import MegazineCover from '@components/MegazineCover'
 
 const Home: NextPage = () => (
-  <div className={styles.container}>
+  <Layout>
     <Head>
       <title>Quoc Khanh</title>
       <meta
@@ -14,22 +15,8 @@ const Home: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main className={styles.main}>
-      <h1 className={styles.title}>Everything</h1>
-
-      <p className={styles.description}>is more complicated than you think</p>
-    </main>
-
-    <footer className={styles.footer}>
-      <a
-        href="https://buiquockhanh.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        The personal site & portfolio of HCMC-based developer Quoc Khanh
-      </a>
-    </footer>
-  </div>
+    <MegazineCover />
+  </Layout>
 )
 
 export default Home
