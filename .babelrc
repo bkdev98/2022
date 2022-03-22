@@ -6,12 +6,12 @@
       {
         "root": ["./src"],
         "alias": {
-          "@components": "./components",
-          "@theme": "./theme",
-          "@utils": "./utils",
-          "@constants": "./constants",
-          "@assets": "./assets",
-          "@hooks": "./hooks"
+          "@components": "./src/components",
+          "@theme": "./src/theme",
+          "@utils": "./src/utils",
+          "@constants": "./src/constants",
+          "@assets": "./src/assets",
+          "@hooks": "./src/hooks"
         }
       }
     ]
