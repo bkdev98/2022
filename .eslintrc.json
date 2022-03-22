@@ -17,14 +17,13 @@
     "no-underscore-dangle": 0,
     "react/no-unescaped-entities": 0,
     "import/prefer-default-export": 0,
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function"
-      }
-    ],
+    "react/function-component-definition": 0,
+    "no-restricted-exports": 0,
     "@typescript-eslint/no-use-before-define": 0,
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^_" }
+    ],
     "@typescript-eslint/naming-convention": [
       "warn",
       {
@@ -56,8 +55,7 @@
             "position": "before"
           },
           {
-            "pattern":
-              "@{components,theme,constants,utils,assets,hooks}{/**,}",
+            "pattern": "@{components,theme,constants,utils,assets,hooks}{/**,}",
             "group": "internal"
           }
         ],

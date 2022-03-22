@@ -1,0 +1,10 @@
+{
+  "Export react component": {
+    "prefix": "erfc",
+    "scope": "typescript,typescriptreact",
+    "body": [
+      "export { default } from './${TM_DIRECTORY/^.+\\/(.*)$/$1/}'",
+      "export * from './${TM_DIRECTORY/^.+\\/(.*)$/$1/}'"
+    ]
+  }
+}
