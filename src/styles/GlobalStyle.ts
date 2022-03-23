@@ -33,6 +33,22 @@ export const GlobalStyle = createGlobalStyle`
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Maelstrom";
+    src: url("/fonts/maelstrom/MaelstromBold.ttf");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Tusker Grotesk";
+    src: url("/fonts/tusker-grotesk/TuskerGrotesk-1700Bold.otf");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+  }
+
   html,
   body {
     padding: 0;
@@ -45,6 +61,18 @@ export const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  h1, h2, h3, h4, h5 {
+    margin: 0px;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
   }
 
   * {

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+import Intro from '@components/Intro'
 import Layout from '@components/Layout'
 import MegazineCover from '@components/MegazineCover'
 
@@ -16,6 +17,8 @@ const Home: NextPage = () => (
     </Head>
 
     <MegazineCover />
+
+    <Intro />
   </Layout>
 )
 

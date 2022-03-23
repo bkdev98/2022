@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import synecdoche from '@assets/images/synecdoche-1.png'
 
 const Wrapper = styled.div`
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
   position: relative;
   width: 100%;
 `
@@ -92,7 +92,7 @@ const CoverImage = styled(Image)`
 
 function MegazineCover() {
   const { scrollY } = useViewportScroll()
-  const y = useTransform(scrollY, [0, 1000], [0, 200])
+  const y = useTransform(scrollY, [0, 1300], [0, 250])
 
   const renderChars = useMemo(
     () =>
