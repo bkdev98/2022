@@ -7,8 +7,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
-  top: 10%;
-  right: 14vw;
+  top: 8%;
+  right: 10vw;
   cursor: pointer;
   z-index: 4;
 `

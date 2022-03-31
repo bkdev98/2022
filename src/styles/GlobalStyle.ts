@@ -48,6 +48,13 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     font-display: swap;
   }
+  @font-face {
+    font-family: "Tusker Grotesk";
+    src: url("/fonts/tusker-grotesk/TuskerGrotesk-2700Bold.otf");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
 
   html,
   body {

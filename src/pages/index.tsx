@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Intro from '@components/Intro'
 import Layout from '@components/Layout'
 import MegazineCover from '@components/MegazineCover'
+import SelectedWorks from '@components/SelectedWorks'
 
 const Home: NextPage = () => (
   <Layout>
@@ -17,8 +18,8 @@ const Home: NextPage = () => (
     </Head>
 
     <MegazineCover />
-
     <Intro />
+    <SelectedWorks />
   </Layout>
 )
 

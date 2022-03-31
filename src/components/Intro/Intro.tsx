@@ -40,7 +40,7 @@ const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-bottom: 4.5vh;
+  margin-bottom: 5.5vh;
 `
 
 const Description = styled.h2`
