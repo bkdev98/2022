@@ -89,6 +89,12 @@ const Header = () => (
             <NavLink>My Stuff</NavLink>
           </Link>
         </NavLinkWrapper>
+        {', '}
+        <NavLinkWrapper>
+          <Link href="/resume">
+            <NavLink>Resume</NavLink>
+          </Link>
+        </NavLinkWrapper>
       </Navigation>
     </Container>
   </Wrapper>
