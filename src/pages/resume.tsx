@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 import Layout from '@components/Layout'
+import Footer from '@components/Layout/Footer'
 
 const Wrapper = styled.div`
   max-width: ${({ theme }) => theme.sizes.container}px;
@@ -34,6 +35,8 @@ const CoverDrifter = styled.div`
   background-color: #eeeff1;
 `
 
+const Link = styled.a``
+
 export default function Resume() {
   return (
     <Layout>
@@ -44,6 +47,13 @@ export default function Resume() {
           </CoverDrifter>
         </CoverImageWrapper>
       </Wrapper>
+      <Footer
+        leftContent={
+          <Link href="/buiquockhanh-2022.pdf" target="_blank">
+            Download PDF
+          </Link>
+        }
+      />
     </Layout>
   )
 }
