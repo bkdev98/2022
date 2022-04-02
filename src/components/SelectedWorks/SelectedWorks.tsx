@@ -60,7 +60,7 @@ const ImageWrapper = styled(motion.a)`
     transition-duration: 2s;
   }
   :hover {
-    filter: none;
+    filter: grayscale(0) sepia(0) saturate(1) contrast(1) brightness(1);
     transform: scale(0.95);
     img {
       transform: scale(1.25);
