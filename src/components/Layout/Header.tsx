@@ -5,18 +5,23 @@ import styled from 'styled-components'
 import Link from '@components/Link'
 
 const Wrapper = styled.div`
+  backdrop-filter: blur(6px);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 4;
+`
+
+const Container = styled.div`
   max-width: ${({ theme }) => theme.sizes.container}px;
   margin: 0px auto;
   display: flex;
   padding: 1rem 0 0.75rem;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
+  position: relative;
   ::after {
     content: '';
     height: 1px;
@@ -68,22 +73,24 @@ const HomeLink = styled.a`
 
 const Header = () => (
   <Wrapper>
-    <Link href="/">
-      <HomeLink>Quoc Khanh</HomeLink>
-    </Link>
-    <Navigation>
-      <NavLinkWrapper>
-        <Link href="/">
-          <NavLink>Work</NavLink>
-        </Link>
-      </NavLinkWrapper>
-      {', '}
-      <NavLinkWrapper>
-        <Link href="/stuff">
-          <NavLink>My Stuff</NavLink>
-        </Link>
-      </NavLinkWrapper>
-    </Navigation>
+    <Container>
+      <Link href="/">
+        <HomeLink>Quoc Khanh</HomeLink>
+      </Link>
+      <Navigation>
+        <NavLinkWrapper>
+          <Link href="/">
+            <NavLink>Work</NavLink>
+          </Link>
+        </NavLinkWrapper>
+        {', '}
+        <NavLinkWrapper>
+          <Link href="/stuff">
+            <NavLink>My Stuff</NavLink>
+          </Link>
+        </NavLinkWrapper>
+      </Navigation>
+    </Container>
   </Wrapper>
 )
 

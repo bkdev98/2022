@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   top: 8%;
   right: 10vw;
   cursor: pointer;
-  z-index: 4;
+  z-index: 3;
 `
 
 const DayWrapper = styled.div`
