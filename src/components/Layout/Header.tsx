@@ -1,7 +1,8 @@
 import React from 'react'
 
-import Link from 'next/link'
 import styled from 'styled-components'
+
+import Link from '@components/Link'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -67,18 +68,18 @@ const HomeLink = styled.a`
 
 const Header = () => (
   <Wrapper>
-    <Link href="/" passHref>
+    <Link href="/">
       <HomeLink>Quoc Khanh</HomeLink>
     </Link>
     <Navigation>
       <NavLinkWrapper>
-        <Link href="/" passHref>
+        <Link href="/">
           <NavLink>Work</NavLink>
         </Link>
       </NavLinkWrapper>
       {', '}
       <NavLinkWrapper>
-        <Link href="/" passHref>
+        <Link href="/stuff">
           <NavLink>My Stuff</NavLink>
         </Link>
       </NavLinkWrapper>

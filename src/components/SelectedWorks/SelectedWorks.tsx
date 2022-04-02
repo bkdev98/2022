@@ -1,8 +1,11 @@
 /* eslint-disable global-require */
 import React, { Fragment } from 'react'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import styled from 'styled-components'
+
+import Link from '@components/Link'
 
 const Wrapper = styled.section`
   position: relative;
@@ -48,7 +51,7 @@ const WorkTags = styled.h5`
   font-weight: 400;
 `
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(motion.a)`
   filter: grayscale(1) sepia(1) saturate(0.5) contrast(0.6) brightness(0.8);
   height: 258px;
   transform: scale(1);
@@ -65,7 +68,7 @@ const ImageWrapper = styled.div`
   }
 `
 
-const WorkContent = styled.div<{
+const WorkContent = styled.a<{
   readonly inverted: boolean
 }>`
   height: 258px;
@@ -76,41 +79,54 @@ const WorkContent = styled.div<{
   align-items: ${({ inverted }) => (inverted ? 'flex-end' : 'flex-start')};
 `
 
-const dummyData = [
+export const dummyData = [
   {
-    id: 1,
+    id: 'u-connect',
     title: 'U-Connect',
     tags: ['typescript', 'urql', 'codegen'],
     thumbnail: require('@assets/images/portfolio/u-connect.png'),
     position: [1, 2],
+    description: `- Exploring nearby businesses, services & products.
+- Connect and hang out with community events.
+- Sending messages with businesses.
+    `,
+    url: 'https://testflight.apple.com/join/xwT5U9By',
   },
   {
-    id: 2,
+    id: 'kizuner',
     title: 'Kizuner',
     tags: ['stripe', 'laravel-echo'],
     thumbnail: require('@assets/images/portfolio/kizuner.png'),
     position: [2, 1],
+    description: `Do what you like, where you want, with the people you like. There are many people around the world waiting for you and you'll find the people you need.`,
+    url: 'https://kizuner.com',
   },
   {
-    id: 3,
+    id: 'bidbid',
     title: 'BidBid',
     tags: ['typescript', 'redux saga', 'socketio'],
     thumbnail: require('@assets/images/portfolio/bidbid.png'),
     position: [2, 3],
+    description: `Bid • Plan • Meet`,
+    url: 'https://bidbid.app',
   },
   {
-    id: 4,
+    id: 'holo-speak',
     title: 'Holo Speak',
     tags: ['zoomus', 'callkit'],
     thumbnail: require('@assets/images/portfolio/holo-speak.png'),
     position: [3, 2],
+    description: `Teach and learn English online`,
+    url: 'https://holospeak.vn',
   },
   {
-    id: 5,
+    id: 'innoteq-pos',
     title: 'Innoteq POS',
     tags: ['electronjs', 'expo', 'socketio'],
     thumbnail: require('@assets/images/portfolio/innoteq-pos.png'),
     position: [1, 2],
+    description: `Easy solution for managing restaurant and coffee shops`,
+    url: 'https://innoteq-pos.netlify.app',
   },
 ]
 
@@ -124,19 +140,23 @@ export default function SelectedWorks() {
           return (
             <Fragment key={item.id}>
               <Cell row={index + 1} column={item.position[0]}>
-                <WorkContent inverted={inverted}>
-                  <WorkTitle>{item.title}</WorkTitle>
-                  <WorkTags>{item.tags.join(', ')}</WorkTags>
-                </WorkContent>
+                <Link href={`/works/${item.id}`}>
+                  <WorkContent inverted={inverted}>
+                    <WorkTitle>{item.title}</WorkTitle>
+                    <WorkTags>{item.tags.join(', ')}</WorkTags>
+                  </WorkContent>
+                </Link>
               </Cell>
               <Cell row={index + 1} column={item.position[1]}>
-                <ImageWrapper>
-                  <Image
-                    src={item.thumbnail}
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </ImageWrapper>
+                <Link href={`/works/${item.id}`}>
+                  <ImageWrapper layoutId={`img-${item.id}`}>
+                    <Image
+                      src={item.thumbnail}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </ImageWrapper>
+                </Link>
               </Cell>
             </Fragment>
           )

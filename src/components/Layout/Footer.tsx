@@ -2,6 +2,11 @@ import React from 'react'
 
 import styled from 'styled-components'
 
+interface FooterProps {
+  leftContent?: any
+  rightContent?: any
+}
+
 const Wrapper = styled.footer`
   position: fixed;
   bottom: 0;
@@ -15,7 +20,6 @@ const Wrapper = styled.footer`
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  text-transform: lowercase;
   font-size: 0.85rem;
   ::after {
     content: '';
@@ -31,8 +35,11 @@ const Wrapper = styled.footer`
   }
 `
 
-const Footer = () => (
-  <Wrapper>The personal site & portfolio of Quoc Khanh</Wrapper>
+const Footer = ({ leftContent, rightContent }: FooterProps) => (
+  <Wrapper>
+    {leftContent || 'The personal site & portfolio of Quoc Khanh'}
+    {rightContent}
+  </Wrapper>
 )
 
 export default Footer
