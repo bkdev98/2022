@@ -79,14 +79,14 @@ const Header = () => (
       </Link>
       <Navigation>
         <NavLinkWrapper>
-          <Link href="/">
+          <Link href="#work">
             <NavLink>Work</NavLink>
           </Link>
         </NavLinkWrapper>
         {', '}
         <NavLinkWrapper>
-          <Link href="/stuff">
-            <NavLink>My Stuff</NavLink>
+          <Link href="#contact">
+            <NavLink>Contact</NavLink>
           </Link>
         </NavLinkWrapper>
         {', '}
@@ -94,6 +94,12 @@ const Header = () => (
           <Link href="/resume">
             <NavLink>Resume</NavLink>
           </Link>
+        </NavLinkWrapper>
+        {', '}
+        <NavLinkWrapper>
+          <NavLink href="https://github.com/bkdev98" target="_blank">
+            GitHub
+          </NavLink>
         </NavLinkWrapper>
       </Navigation>
     </Container>

@@ -133,7 +133,7 @@ export const dummyData = [
 export default function SelectedWorks() {
   return (
     <Wrapper>
-      <Heading>Selected Works</Heading>
+      <Heading id="work">Selected Works</Heading>
       <Grid>
         {dummyData.map((item, index) => {
           const inverted = item.position[0] < item.position[1]
