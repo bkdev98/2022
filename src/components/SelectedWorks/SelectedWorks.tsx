@@ -153,6 +153,7 @@ export default function SelectedWorks() {
                       src={item.thumbnail}
                       layout="fill"
                       objectFit="cover"
+                      placeholder="blur"
                     />
                   </ImageWrapper>
                 </Link>

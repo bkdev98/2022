@@ -64,7 +64,12 @@ export default function WorkDetail() {
           <WorkDescription>{data.description}</WorkDescription>
         </Content>
         <ImageWrapper layoutId={`img-${data.id}`}>
-          <Image src={data.thumbnail} layout="intrinsic" objectFit="cover" />
+          <Image
+            src={data.thumbnail}
+            layout="intrinsic"
+            objectFit="cover"
+            placeholder="blur"
+          />
         </ImageWrapper>
       </Wrapper>
       <Footer
