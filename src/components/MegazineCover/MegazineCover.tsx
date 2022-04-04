@@ -15,18 +15,16 @@ const Wrapper = styled.div`
 const CoverTitle = styled.div`
   font-size: 10rem;
   margin-top: 14rem;
-  margin-bottom: -9rem;
-  font-family: Migra, seref;
-  font-weight: 300;
+  margin-bottom: -11rem;
+  font-family: 'Silk Serif', seref;
   z-index: -1;
   text-align: center;
-  letter-spacing: 0.25rem;
   text-transform: uppercase;
 `
 
 const CoverTitleBlurred = styled(CoverTitle)`
   position: absolute;
-  top: -19rem;
+  top: -20rem;
   right: 0;
   left: 0;
   filter: blur(2px);

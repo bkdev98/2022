@@ -6,18 +6,11 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 import Link from '@components/Link'
+import SectionTitle from '@components/SectionTitle'
 
 const Wrapper = styled.section`
   position: relative;
   margin-bottom: 6rem;
-`
-
-const Heading = styled.h2`
-  max-width: ${({ theme }) => theme.sizes.container}px;
-  margin: 0px auto;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 3rem;
 `
 
 const Grid = styled.div`
@@ -79,6 +72,11 @@ const WorkContent = styled.a<{
   align-items: ${({ inverted }) => (inverted ? 'flex-end' : 'flex-start')};
 `
 
+const Anchor = styled.div`
+  position: absolute;
+  top: -120px;
+`
+
 export const dummyData = [
   {
     id: 'u-connect',
@@ -133,7 +131,8 @@ export const dummyData = [
 export default function SelectedWorks() {
   return (
     <Wrapper>
-      <Heading id="work">Selected Works</Heading>
+      <Anchor id="work" />
+      <SectionTitle index="I" title="Selected Works" />
       <Grid>
         {dummyData.map((item, index) => {
           const inverted = item.position[0] < item.position[1]

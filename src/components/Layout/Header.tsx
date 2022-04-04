@@ -37,17 +37,19 @@ const Container = styled.div`
 `
 
 const Navigation = styled.div`
-  text-transform: lowercase;
+  text-transform: uppercase;
   font-size: 0.85rem;
 `
 
 const NavLinkWrapper = styled.div`
   overflow: hidden;
   display: inline-block;
+  margin-left: 10px;
 `
 
 const NavLink = styled.a`
   position: relative;
+  top: 2px;
   ::after {
     content: '';
     position: absolute;
@@ -68,7 +70,7 @@ const NavLink = styled.a`
 `
 
 const HomeLink = styled.a`
-  font-family: Migra, seref;
+  font-family: 'Silk Serif', seref;
 `
 
 const Header = () => (
@@ -83,23 +85,10 @@ const Header = () => (
             <NavLink>Work</NavLink>
           </Link>
         </NavLinkWrapper>
-        {', '}
         <NavLinkWrapper>
           <Link href="#contact">
             <NavLink>Contact</NavLink>
           </Link>
-        </NavLinkWrapper>
-        {/* {', '}
-        <NavLinkWrapper>
-          <Link href="/resume">
-            <NavLink>Resume</NavLink>
-          </Link>
-        </NavLinkWrapper> */}
-        {', '}
-        <NavLinkWrapper>
-          <NavLink href="https://github.com/bkdev98" target="_blank">
-            GitHub
-          </NavLink>
         </NavLinkWrapper>
       </Navigation>
     </Container>

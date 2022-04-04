@@ -56,6 +56,14 @@ export const GlobalStyle = createGlobalStyle`
     font-display: swap;
   }
 
+  @font-face {
+    font-family: "Silk Serif";
+    src: url("/fonts/silk-serif/SilkSerif-ExtraLight.woff2");
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+  }
+
   html,
   body {
     padding: 0;

@@ -55,7 +55,7 @@ export default function Intro() {
       <Availability />
       <Content>
         <HeadingWrapper>
-          <SubHeading>React Native</SubHeading>
+          <SubHeading>Frontend</SubHeading>
           <Heading>Developer</Heading>
         </HeadingWrapper>
         <DescriptionWrapper>

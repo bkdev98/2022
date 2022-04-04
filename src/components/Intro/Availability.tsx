@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { format } from 'date-fns'
+import { useRouter } from 'next/router'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
 import { useCountUp } from 'use-count-up'
@@ -37,6 +38,7 @@ const Text = styled.h5`
 
 export default function Availability() {
   const { ref, inView } = useInView()
+  const router = useRouter()
 
   const { value: dayDozen } = useCountUp({
     isCounting: inView,
@@ -52,7 +54,7 @@ export default function Availability() {
   })
 
   return (
-    <Wrapper ref={ref}>
+    <Wrapper ref={ref} onClick={() => router.push('#contact')}>
       <DayWrapper>
         <Day>{dayDozen}</Day>
         <Day>{dayUnit}</Day>
