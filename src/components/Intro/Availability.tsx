@@ -1,7 +1,9 @@
 import React from 'react'
 
 import { format } from 'date-fns'
+import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
+import { useCountUp } from 'use-count-up'
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,10 +36,26 @@ const Text = styled.h5`
 `
 
 export default function Availability() {
+  const { ref, inView } = useInView()
+
+  const { value: dayDozen } = useCountUp({
+    isCounting: inView,
+    end: Math.floor((new Date().getDate() / 10) % 10),
+    duration: 3.2,
+    easing: 'easeOutCubic',
+  })
+  const { value: dayUnit } = useCountUp({
+    isCounting: inView,
+    end: new Date().getDate() % 10,
+    duration: 3.2,
+    easing: 'easeOutCubic',
+  })
+
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <DayWrapper>
-        <Day>{format(new Date(), 'dd')}</Day>
+        <Day>{dayDozen}</Day>
+        <Day>{dayUnit}</Day>
       </DayWrapper>
       <LabelWrapper>
         <Month>{format(new Date(), 'MMM')}</Month>

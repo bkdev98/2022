@@ -89,12 +89,12 @@ const Header = () => (
             <NavLink>Contact</NavLink>
           </Link>
         </NavLinkWrapper>
-        {', '}
+        {/* {', '}
         <NavLinkWrapper>
           <Link href="/resume">
             <NavLink>Resume</NavLink>
           </Link>
-        </NavLinkWrapper>
+        </NavLinkWrapper> */}
         {', '}
         <NavLinkWrapper>
           <NavLink href="https://github.com/bkdev98" target="_blank">
