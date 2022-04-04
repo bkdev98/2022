@@ -118,7 +118,7 @@ function MegazineCover() {
             style={{ y }}
             transition={{ ease: 'easeInOut', duration: 2 }}
           >
-            <CoverImage src={synecdoche} />
+            <CoverImage src={synecdoche} placeholder="blur" />
           </ImageWrapper>
         </CoverDrifter>
       </CoverImageWrapper>
